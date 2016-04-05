@@ -45,11 +45,24 @@ try:
         print "Changing tweet selection"
         if current_tweet == 1:
           current_tweet == 2
+          GPIO.ouput(t_LED, False)
+          GPIO.output(m_LED, True)
+          GPIO.output(b_LED, False)
+          time.sleep(0.2)
           
         elif current_tweet == 2:
           current_tweet == 3
+          GPIO.ouput(t_LED, False)
+          GPIO.output(m_LED, True)
+          GPIO.output(b_LED, False)
+          time.sleep(0.2)
+          
         else:
           current_tweet == 1
+          GPIO.ouput(t_LED, True)
+          GPIO.output(m_LED, False)
+          GPIO.output(b_LED, False)
+          time.sleep(0.2)
         
 
 finally:
