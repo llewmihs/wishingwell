@@ -1,6 +1,6 @@
 # import the necessary modules: the GPIO, Twython, Time and the PiCamera
 
-import RPi.GPIO as GPI
+import RPi.GPIO as GPIO
 import time
 from twython import Twython
 import picamera
