@@ -5,6 +5,8 @@ import time
 from twython import Twython
 import picamera
 
+
+
 # set integers for the various buttons and LEDs
 select_btn = 17
 tweet_btn = 27
@@ -20,7 +22,6 @@ GPIO.setup(t_LED, GPIO.OUT)
 GPIO.setup(m_LED, GPIO.OUT)
 GPIO.setup(b_LED, GPIO.OUT)
 
-# Test
 # open and load the config file for the Twitter client (Twython)
 config = {}
 execfile("wishing_tweet_conf.py", config)
