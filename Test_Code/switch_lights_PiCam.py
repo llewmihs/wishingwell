@@ -70,6 +70,7 @@ try:
             camera.start_preview()
             time.sleep(3)
             camera.capture('image.jpg')
+            
             camera.stop_preview()
             debounce()
             
