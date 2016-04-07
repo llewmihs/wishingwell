@@ -61,8 +61,11 @@ try:
                 light_switch(False, False, True)
                 print "New tweet choice: %s" % tweet0
             debounce()
+        # this is the if statment that takes the image to upload to twitter
         elif GPIO.input(tweet_btn) == False:
-            print "The %s has been pressed" % tweet_btn
+            print "Preparing to take a photo"
+            camera = picamera.PiCamera()
+            camera.capture('image.jpg')
             debounce()
             
 finally:
