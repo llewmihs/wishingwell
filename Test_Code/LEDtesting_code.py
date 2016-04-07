@@ -16,6 +16,12 @@ GPIO.setup(t_LED, GPIO.OUT)
 GPIO.setup(m_LED, GPIO.OUT)
 GPIO.setup(b_LED, GPIO.OUT)
 
+# initialise the LEDs as off to begin with
+GPIO.output(t_LED, False)
+GPIO.output(m_LED, False)
+GPIO.output(b_LED, False)
+
+
 # this is the testing loop
 
 try:
