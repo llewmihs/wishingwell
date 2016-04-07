@@ -11,6 +11,9 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(select_btn, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.setup(tweet_btn, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
+def debounce():
+    time.sleep(0.2)
+    
 try:
     while True:
         if GPIO.input(select_btn) == False:
@@ -23,5 +26,4 @@ try:
 finally:
     GPIO.cleanup()
     
-def debounce():
-    time.sleep(0.2)
+
