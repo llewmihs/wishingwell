@@ -20,19 +20,19 @@ GPIO.setup(b_LED, GPIO.OUT)
 
 try:
     while True:
-        print "&s on" % t_LED
+        print "%s on" % t_LED
         GPIO.output(t_LED, True)
         time.sleep(2)
         print "%s off" % t_LED
         time.sleep(2)
         
-        print "&s on" % m_LED
+        print "%s on" % m_LED
         GPIO.output(m_LED, True)
         time.sleep(2)
         print "%s off" % m_LED
         time.sleep(2)
         
-        print "&s on" % b_LED
+        print "%s on" % b_LED
         GPIO.output(b_LED, True)
         time.sleep(2)
         print "%s off" % b_LED
