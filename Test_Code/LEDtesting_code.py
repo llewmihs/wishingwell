@@ -24,18 +24,21 @@ try:
         GPIO.output(t_LED, True)
         time.sleep(2)
         print "%s off" % t_LED
+        GPIO.output(t_LED, False)
         time.sleep(2)
         
         print "%s on" % m_LED
         GPIO.output(m_LED, True)
         time.sleep(2)
         print "%s off" % m_LED
+        GPIO.output(m_LED, False)
         time.sleep(2)
         
         print "%s on" % b_LED
         GPIO.output(b_LED, True)
         time.sleep(2)
         print "%s off" % b_LED
+        GPIO.output(b_LED, False)
         time.sleep(2)
 
 finally:
