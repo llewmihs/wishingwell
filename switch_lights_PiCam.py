@@ -47,6 +47,12 @@ tweet0 = "This is the first Tweet"
 tweet1 = "This is the second Tweet"
 tweet2 = "This is the third Tweet"
 
+# write any twitter handles we want to include here
+twit_message = "test"
+handle1 = "@llewmihs"
+handle2 = ""
+handle3 = ""
+
 try:
     while True:
         if GPIO.input(select_btn) == False:
