@@ -78,7 +78,7 @@ try:
             print "Preparing to take a photo"
             camera.start_preview()
             time.sleep(3)
-            camera.rotation = 90
+            camera.rotation = 270
             camera.capture('image.jpg')
             camera.stop_preview()
             # create the tweet
