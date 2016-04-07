@@ -26,12 +26,14 @@ GPIO.output(b_LED, False)
 def debounce():
     time.sleep(0.4)
     
+def light_switch(top, middle, bottom):
+    GPIO.output(t_LED, top)
+    GPIO.output(m_LED, middle)
+    GPIO.output(b_LED, bottom)
     
 # set the choice fucntion to 0 [it can ahve values 0,1,2]
 tweet_choice = 0
-GPIO.output(t_LED, True)
-GPIO.output(m_LED, False)
-GPIO.output(b_LED, False)
+light_switch(True, False, False)
 
 try:
     while True:
@@ -39,21 +41,15 @@ try:
             print "The %s has been pressed" % select_btn
             if tweet_choice == 0:
                 tweet_choice = 1
-                GPIO.output(t_LED, False)
-                GPIO.output(m_LED, True)
-                GPIO.output(b_LED, False)
+                light_switch(True, False, False)
                 print "New tweet choice: %s" % tweet_choice
             elif tweet_choice == 1:
                 tweet_choice = 2
-                GPIO.output(t_LED, False)
-                GPIO.output(m_LED, False)
-                GPIO.output(b_LED, True)
+                light_switch(False, True, False)
                 print "New tweet choice: %s" % tweet_choice
             else:
                 tweet_choice = 0
-                GPIO.output(t_LED, True)
-                GPIO.output(m_LED, False)
-                GPIO.output(b_LED, False)
+                light_switch(False, False, True)
                 print "New tweet choice: %s" % tweet_choice
             debounce()
         elif GPIO.input(tweet_btn) == False:
