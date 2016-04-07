@@ -60,16 +60,16 @@ try:
             if tweet_choice == 0:
                 tweet_choice = 1
                 twit_message = tweet1 + " @llewmihs"
-                light_switch(True, False, False)
+                light_switch(False, True, False)
                 print "New tweet choice: %s" % tweet1
             elif tweet_choice == 1:
                 tweet_choice = 2
-                light_switch(False, True, False)
+                light_switch(False, False, True)
                 twit_message = tweet2 + " @llewmihs"
                 print "New tweet choice: %s" % tweet2
             else:
                 tweet_choice = 0
-                light_switch(False, False, True)
+                light_switch(True, False, False)
                 twit_message = tweet0 + " @llewmihs"
                 print "New tweet choice: %s" % tweet0
             debounce()
