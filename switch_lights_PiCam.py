@@ -53,18 +53,18 @@ try:
             print "The %s has been pressed" % select_btn
             if tweet_choice == 0:
                 tweet_choice = 1
-                tweet_message = tweet1 + " @llewmihs"
+                twit_message = tweet1 + " @llewmihs"
                 light_switch(True, False, False)
                 print "New tweet choice: %s" % tweet1
             elif tweet_choice == 1:
                 tweet_choice = 2
                 light_switch(False, True, False)
-                tweet_message = tweet2 + " @llewmihs"
+                twit_message = tweet2 + " @llewmihs"
                 print "New tweet choice: %s" % tweet2
             else:
                 tweet_choice = 0
                 light_switch(False, False, True)
-                tweet_message = tweet0 + " @llewmihs"
+                twit_message = tweet0 + " @llewmihs"
                 print "New tweet choice: %s" % tweet0
             debounce()
         # this is the if statment that takes the image to upload to twitter
