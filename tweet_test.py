@@ -1,6 +1,7 @@
 import time
 #import the twitter module
 from twython import Twython
+import picamera
 
 config = {}
 execfile("real_config.py", config)
