@@ -68,6 +68,7 @@ try:
         elif GPIO.input(tweet_btn) == False:
             print "Preparing to take a photo"
             camera.start_preview()
+            time.sleep(3)
             camera.capture('image.jpg')
             camera.stop_preview()
             debounce()
