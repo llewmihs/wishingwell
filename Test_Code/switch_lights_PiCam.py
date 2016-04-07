@@ -4,6 +4,9 @@ import time
 from twython import Twython
 import picamera
 
+# create PiCamera
+camera = picamera.PiCamera()
+
 # set integers for the various buttons and LEDs
 select_btn = 17
 tweet_btn = 27
@@ -64,8 +67,9 @@ try:
         # this is the if statment that takes the image to upload to twitter
         elif GPIO.input(tweet_btn) == False:
             print "Preparing to take a photo"
-            camera = picamera.PiCamera()
+            camera.start_preview()
             camera.capture('image.jpg')
+            camera.stop_preview()
             debounce()
             
 finally:
